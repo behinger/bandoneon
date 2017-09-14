@@ -3,7 +3,7 @@
     "baseUrl": "../js",
     "dir": "../js-min",
     "keepBuildDir": false,
-    "optimize": "uglify2",
+    "optimize": false,
     "removeCombined": true,
     "optimizeCss": "standard",
     "mainConfigFile": "../js/app.js",

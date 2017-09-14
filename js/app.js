@@ -6,7 +6,8 @@ requirejs.config({
         bootstrap: 'lib/bootstrap',
         jquery: 'lib/jquery-2.0.3.min',
         raphael: 'lib/raphael-min',
-        underscore: 'lib/underscore-min'
+        underscore: 'lib/underscore-min',
+        tonal: 'lib/tonal.min'
     },
     shim: {
         bootstrap: ['jquery'],

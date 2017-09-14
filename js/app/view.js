@@ -9,7 +9,7 @@ define([
     'app/router',
     'app/utils',
     'app/layout',
-    'app/chords'
+    'app/chords_tonal'
 ], function ($, bootstrap, _, Backbone, raphael, appModel, appRouter, utils, layout, chords) {
     'use strict';
 
@@ -128,7 +128,7 @@ define([
 
             chord = chords[side][direction][quality][key];
             if (!chord) return;
-            
+
             currentLayout = layout[side][direction];
             if (!currentLayout) return;
 
@@ -151,7 +151,7 @@ define([
 
             side = this.model.get('side');
             direction = this.model.get('direction');
-    
+
             if (!side || !direction) return;
 
             this.paper.clear();
