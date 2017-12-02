@@ -133,6 +133,18 @@ define([
             if (!currentLayout) return;
 
             for (k in currentLayout) {
+
+                var basenotes = chord.map(function(e){return(Tonal.note.pc(e))});
+                if (_.indexOf(basenotes,Tonal.note.pc(k)) !== -1){
+                  this.paper.circle(currentLayout[k][0] + 10, currentLayout[k][1] + 30, 28)
+                      .attr({
+                          'stroke': '#222',
+                          'stroke-width': 2,
+                          'fill': 'black',
+                          'fill-opacity': 0.05
+                      });
+                      console.log('success');
+                }
                 if (_.indexOf(chord, k) === -1) continue;
                 label = k;
                 this.paper.circle(currentLayout[k][0] + 10, currentLayout[k][1] + 30, 28)
